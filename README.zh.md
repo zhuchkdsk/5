@@ -29,7 +29,7 @@ document.write('<script type="text/javascript" src="https://apiupload.oss-cn-bei
     $(document).ready(function () {
         SoPay.post({
           app_id: '11323', //your appid
-          type: 'usdtAndTrx', //支Mode of payment/all/usdtAndTrx/usdt/trx/wechat/alipay/qq/bankCard/alipay    
+          type: 'all', //支Mode of payment/all/usdtAndTrx/usdt/trx/wechat/alipay/qq/bankCard/alipay    
           uid: '23', //your Websites  userID
           total_fee: 2.00, //Amount
           out_trade_no: '202010092206552336', //order
