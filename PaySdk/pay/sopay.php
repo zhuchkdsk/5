@@ -14,7 +14,7 @@ extract($_POST);
 $notify_url = urldecode($notify_url); //来路
 $return_url = urldecode($return_url); //解码支付成功后的页面
 
-//http://api.bjyjbn.com/static/sopay_bank.js
+
 ?>
 <!DOCTYPE html>
 <html>
