@@ -20,7 +20,7 @@ $return_url = urldecode($return_url); //解码支付成功后的页面
 <html>
 
 <head>
-  <title><?php echo $pay_title ?></title>
+  <title>sopay支付</title>
   <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,7 +29,6 @@ $return_url = urldecode($return_url); //解码支付成功后的页面
 </head>
 
 <body>
-
 
 
   <script>
@@ -55,16 +54,17 @@ $return_url = urldecode($return_url); //解码支付成功后的页面
             swal('错误', res.msg, 'error')
             return
           }
-          $("#base64img").attr("src", res.data.pay_url); //收款二维码
-          $(".total_fee").html(res.data.really_total_fee); //支付金额
-          $(".exprie_time").html(res.data.exp_time); //过期时间
-          $(".order_no").html(res.data.out_trade_no); //订单号
+          $("#base64img").attr("src", res.data.pay_url);
+          $(".total_fee").html(res.data.really_total_fee);
+          $(".exprie_time").html(res.data.exp_time);
+          $(".order_no").html(res.data.out_trade_no);
         },
         success: function(data) {
           //支付成功后的函数
-          alert("支付成功");
+
           console.log(data);
-          window.location.href = "<?php echo $return_url ?>"
+          alert("支付成功");
+          //window.location.href = "<?php echo $return_url ?>"
         }
       });
 
