@@ -8,11 +8,15 @@
 
 **中文** | [English](https://github.com/amu1433/sopay/blob/main/README.zh.md)
 
-
 ## 项目地址
 
 <a href="https://home.bjyjbn.com/login/BCG">http://home.bjyjbn.com/login/BCG</a>
 
+## telegarm 群
+
+https://t.me/+X3JxsPNvHt41Zjdl
+
+![输入图片说明](https://apiupload.oss-cn-beijing.aliyuncs.com/tinymce/20220905/471a3414d2bba856e18374e4c26884a3.jpeg 'api.png')
 
 ## 主要功能
 
@@ -59,7 +63,7 @@ document.write('<script type="text/javascript" src="https://apiupload.oss-cn-bei
     $(document).ready(function () {
         SoPay.post({
           app_id: '11323', //你的appid
-          type: 'all', //支付方式或者all/usdtAndTrx/usdt/trx/wechat/alipay/qq/bankCard/alipay    
+          type: 'all', //支付方式或者all/usdtAndTrx/usdt/trx/wechat/alipay/qq/bankCard/alipay
           uid: '23', //你网站用户id
           total_fee: 2.00, //支付金额
           out_trade_no: '202010092206552336', //订单号
@@ -94,21 +98,15 @@ document.write('<script type="text/javascript" src="https://apiupload.oss-cn-bei
 
 ```
 
-
-## 前端JavaScript对接demo
+## 前端 JavaScript 对接 demo
 
 https://github.com/amu1433/sopay/blob/main/demo.html
 
-
-## php的demo（请先下载PaySdk文件到你网站的根目录）
+## php 的 demo（请先下载 PaySdk 文件到你网站的根目录）
 
 https://github.com/amu1433/sopay/blob/main/demo.php
 
-
 ## dist(文件夹为平台的前端文件)
-
-
-
 
 - 参数详解
 
@@ -196,3 +194,9 @@ app_id=xxxxx&out_trade_no=xxxxx&param=&timestamp=1603698374&total_fee=xxxxx&uid=
 ![输入图片说明](https://apiupload.oss-cn-beijing.aliyuncs.com/tinymce/20220419/5ede6de3de421f094f791a942c1479b3.png 'api.png')
 ![输入图片说明](https://apiupload.oss-cn-beijing.aliyuncs.com/tinymce/20220419/e57d6214c0a4a881e643a3c67f387166.png 'api.png')
 ![输入图片说明](https://apiupload.oss-cn-beijing.aliyuncs.com/tinymce/20220419/eb902bfbe4ef3b36b0881ba82331c268.png 'api.png')
+
+## telegarm 群
+
+https://t.me/+X3JxsPNvHt41Zjdl
+
+![输入图片说明](https://apiupload.oss-cn-beijing.aliyuncs.com/tinymce/20220905/471a3414d2bba856e18374e4c26884a3.jpeg 'api.png')
