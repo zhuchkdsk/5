@@ -10,7 +10,7 @@
 
 https://t.me/+X3JxsPNvHt41Zjdl
 
-![输入图片说明](https://apiupload.oss-cn-beijing.aliyuncs.com/tinymce/20220905/471a3414d2bba856e18374e4c26884a3.jpeg 'api.png')
+![输入图片说明](https://apiupload.oss-cn-beijing.aliyuncs.com/tinymce/20220905/57bdc18c6e9045a72cfea9143751bbac.png 'api.png')
 
 ## What can we do?
 
@@ -169,4 +169,4 @@ app_id=xxxxx&out_trade_no=xxxxx&param=&timestamp=1603698374&total_fee=xxxxx&uid=
 
 https://t.me/+X3JxsPNvHt41Zjdl
 
-![输入图片说明](https://apiupload.oss-cn-beijing.aliyuncs.com/tinymce/20220905/471a3414d2bba856e18374e4c26884a3.jpeg 'api.png')
+![输入图片说明](https://apiupload.oss-cn-beijing.aliyuncs.com/tinymce/20220905/57bdc18c6e9045a72cfea9143751bbac.png 'api.png')
