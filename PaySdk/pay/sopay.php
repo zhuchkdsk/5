@@ -6,68 +6,54 @@
  */
 @error_reporting(E_ALL ^ E_NOTICE);
 header('Content-Type: text/html; charset=utf-8');
-
 extract($_GET);
 extract($_POST);
-
 //获取来路
 $notify_url = urldecode($notify_url); //来路
 $return_url = urldecode($return_url); //解码支付成功后的页面
-
 
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-  <title>sopay支付</title>
+  <title>paying</title>
+  <meta charset="utf-8" />
   <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <script src="https://apiupload.oss-cn-beijing.aliyuncs.com/assets/sopay.js?v=<?php echo  time() ?>"></script>
 </head>
 
 <body>
-
-
+  <div id="sopay">loading...</div>
   <script>
+    document.write('<script type="text/javascript" src="https://api.sopay8.com/assets/sopay.js?v=' + Math.random() + '"><\/script>')
     $(document).ready(function() {
       SoPay.post({
-        app_id: "<?php echo $app_id ?>", //
-        type: "<?php echo $type ?>", //
+        app_id: "<?php echo $app_id ?>",
+        type: "<?php echo $type ?>",
         uid: "<?php echo $uid ?>",
         total_fee: "<?php echo $total_fee ?>",
         out_trade_no: "<?php echo $out_trade_no ?>",
-        timestamp: "<?php echo $timestamp ?>",
         return_url: "<?php echo $return_url ?>",
         notify_url: "<?php echo $notify_url ?>",
+        sign: "<?php echo $sign ?>",
         param: "<?php echo $param ?>",
         currency: "<?php echo $currency ?>",
         language: "<?php echo $language ?>",
-        style: "<?php echo $style ?>",
-        sign: "<?php echo $sign ?>",
+        specify_address: "<?php echo $specify_address ?>",
         callback: function(res) {
           //获取二维码后显示的函数
-          console.log(res);
-          if (res.code != 1) {
-            swal('错误', res.msg, 'error')
-            return
-          }
-          $("#base64img").attr("src", res.data.pay_url);
-          $(".total_fee").html(res.data.really_total_fee);
-          $(".exprie_time").html(res.data.exp_time);
-          $(".order_no").html(res.data.out_trade_no);
+          console.table(res);
         },
         success: function(data) {
           //支付成功后的函数
-
-          console.log(data);
+          console.table(data);
           alert("支付成功");
-          //window.location.href = "<?php echo $return_url ?>"
+          window.location.href = "<?php echo $return_url ?>"
         }
       });
-
     });
   </script>
 </body>

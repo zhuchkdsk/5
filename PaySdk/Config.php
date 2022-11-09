@@ -2,17 +2,16 @@
 /*
  * @Author: will
  * @Date: 2020-09-30 00:59:45
- * @LastEditTime: 2022-09-02 10:29:12
+ * @LastEditTime: 2022-11-09 12:16:48
  * @LastEditors: will
  * @Description: 
  */
 @error_reporting(E_ALL ^ E_NOTICE);
 
 //支付平台选择
-define("PAY_APPID", "xxx"); //你的appid
+define("PAY_APPID", "xxxx"); //你的appid
 define("PAY_KEY", "xxxx"); //你的秘钥
-define('PAY_TYPE', 'all'); //支付方式或者all/usdtAndTrx/usdt/trx/wechat/alipay/qq/bankCard/alipay    
-
+define('PAY_TYPE', ''); //支付方式或者all/usdtAndTrx/usdt/trx/wechat/alipay/qq/bankCard/alipay    
 
 /*以下信息为可选项目*/
 define("PAY_CHAT_MP", "ae6334e79c24d90f055f14667a6abbed"); //公众号获取用户信息秘钥

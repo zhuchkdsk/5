@@ -6,7 +6,6 @@ function PayCreateSdk($payData)
   }
   $payData['app_id'] = PAY_APPID;
   $payData['type'] = PAY_TYPE;
-  $payData['timestamp'] = time();
   $payData['sign'] = pay_sign($payData);
   $url = PAY_URL;
 
@@ -33,7 +32,6 @@ function PayCreateSdk($payData)
 }
 
 
-
 /**
  * 支付签名
  * @param array $array
@@ -47,8 +45,7 @@ function pay_sign($payData)
     'uid' => $payData['uid'],
     'out_trade_no' => $payData['out_trade_no'],
     'total_fee' => $payData['total_fee'], //平台单号
-    'param' => $payData['param'],
-    'timestamp' => $payData['timestamp']
+    'param' => isset($payData['param']) ? $payData['param']  : ''
   );
   ksort($ksortData);
   $str = '';
@@ -57,7 +54,7 @@ function pay_sign($payData)
   }
   $str .= "key=" . PAY_KEY;
   $sign = md5($str);
-  return $sign;
+  return strtolower($sign);
 }
 
 /**
@@ -70,9 +67,8 @@ function notify_pay_sign($payData)
 {
   $str = "out_trade_no=" . $payData['out_trade_no'] . "&total_fee=" . $payData['total_fee'] . "&uid=" . $payData['uid'] . "&notify_key=" . PAY_KEY;
   $sign = md5($str);
-  return $sign;
+  return strtolower($sign);
 }
-
 
 /**
  * 获取用户信息

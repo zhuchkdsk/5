@@ -1,0 +1,1 @@
+import{cu as t}from"./index.314cb164.js";const s=e=>t.get({url:"/user/index",params:e}),o=e=>t.get({url:"/login/getUserInfo",params:e}),a=e=>t.post({url:"/user/update",params:e}),g=e=>t.post({url:"/user/recharge",params:e});export{a as U,s as a,o as g,g as r};

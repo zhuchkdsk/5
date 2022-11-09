@@ -9,7 +9,6 @@ if (!function_exists('PayCreateSdk')) {
 }
 $total_fee = $_POST['total_fee']; //订单金额
 $out_trade_no = $_POST['out_trade_no']; //商户订单号
-
 $transaction_id = $_POST['transaction_id']; //我们平台订单号
 $param = $_POST['param']; //下单时传送的其他参数
 $uid = $_POST['uid']; //用户id
