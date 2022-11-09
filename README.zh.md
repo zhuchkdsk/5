@@ -7,8 +7,9 @@
 <a href="https://home.sopay8.com/">https://home.sopay8.com/</a>
 
 ## telegarm
-
+### telegram:@sopay8
 https://t.me/+X3JxsPNvHt41Zjdl
+
 
 ![输入图片说明](https://apiupload.oss-cn-beijing.aliyuncs.com/tinymce/20220905/57bdc18c6e9045a72cfea9143751bbac.png 'api.png')
 
@@ -149,6 +150,8 @@ app_id=xxxxx&out_trade_no=xxxxx&param=&total_fee=xxxxx&uid=xxxxx&key=xxxxx
 ![输入图片说明](https://apiupload.oss-cn-beijing.aliyuncs.com/tinymce/20220419/eb902bfbe4ef3b36b0881ba82331c268.png 'api.png')
 
 ## telegarm
+
+### telegram:@sopay8
 
 https://t.me/+X3JxsPNvHt41Zjdl
 
