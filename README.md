@@ -74,11 +74,11 @@ document.write('<script type="text/javascript" src="https://api.sopay8.com/asset
           sign: '2020091051481001', //签名
           callback: function (res) {
             //获取二维码后显示的函数
-            console.table(res);
+            console.log(res);
           },
           success: function (data) {
             //支付成功后的函数
-             console.table(data)
+             console.log(data)
             alert('支付成功')
             //跳转
             //跳转
