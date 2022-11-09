@@ -58,7 +58,10 @@ https://t.me/+X3JxsPNvHt41Zjdl
 ```javascript
 <div id="sopay">loading...</div>
 <script>
-  document.write('<script type="text/javascript" src="https://api.sopay8.com/assets/sopay.js?v=' + Math.random() + '"><\/script>')
+document.write('<script type="text/javascript" src="https://api.sopay8.com/assets/sopay.js?v=' + Math.random() + '"><\/script>')
+</script>
+
+<script>
     $(document).ready(function () {
         SoPay.post({
           app_id: '11323', //你的appid
