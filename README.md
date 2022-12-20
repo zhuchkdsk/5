@@ -1,10 +1,6 @@
-<!--
- * @Author: will
- * @LastEditors: will
- * @Description:双仓库
--->
 
-> USDT_TRC20 充值 API.USDT TRC20 TRON 微信，支付宝,云闪付,alipay,wechat 免签支付
+
+> USDT_TRC20 充值 API.USDT TRC20 TRON 钱包地址监控 微信，支付宝,云闪付,alipay,wechat 免签支付
 
 **中文** | [English](https://github.com/amu1433/sopay/blob/main/README.zh.md)
 
@@ -25,7 +21,9 @@ https://t.me/+X3JxsPNvHt41Zjdl
 - 微信免签支付
 - 支付宝免签支付
 - 云闪付免签支付
-
+- 钱包地址监控
+- 秒级回调url，webhook
+- 
 ## USDT，TRC20 支付介绍
 
 ### API 下单,,回调推送,（币直接到达你的账户,我们不参与资金）
@@ -43,15 +41,15 @@ https://t.me/+X3JxsPNvHt41Zjdl
 ## 微信个码支付介绍
 
 - 无需挂机
-- 采用 websock 接口,无需轮训查询是否支付
+- 采用 websocket 接口,无需轮训查询是否支付
 - 支持固码
 - 异常提醒
 - 自动开启
 -
 
-## 支付宝/银行卡
+## 钱包地址监控
 
-- 采用手机端监控
+- 有进账/出账自动post回调到你的url
 
 ## 对接方式
 
@@ -125,7 +123,7 @@ https://github.com/amu1433/sopay/blob/main/demo.php
 
 
 **callback 函数用于自定义页面，返回如下参数,根据参数设置页面即可**
-```json
+```javascript
 {
     "id": 56899, //订单id
     "out_trade_no": "1667808605",//你平台的id
@@ -148,7 +146,7 @@ https://github.com/amu1433/sopay/blob/main/demo.php
 **success 支付成功后的函数返回(<font color=Crimson> 同时我们也会给你的回调 url,notify_url 发送同样数据,请使用 POST 请求接收</font>)**
 
 
-```json
+```javascript
 {
     "pay_type": "trx",//支付方式
     "uid": "",//你网站用户id
@@ -170,7 +168,13 @@ https://github.com/amu1433/sopay/blob/main/demo.php
 app_id=xxxxx&out_trade_no=xxxxx&param=&total_fee=xxxxx&uid=xxxxx&key=xxxxx
 ```
 
+
+
 # 项目图片
+
+![default.png](https://apiupload.oss-cn-beijing.aliyuncs.com/upload/20221220/4a71219e1f1f9abc3b6101716c008257.png)
+
+![default.png](https://apiupload.oss-cn-beijing.aliyuncs.com/upload/20221220/0c43eeb3b9a40d39754a3a8a27b9904a.png)
 
 ![输入图片说明](https://apiupload.oss-cn-beijing.aliyuncs.com/tinymce/20220419/b4f1b47f5dc8a939c186f74690539e83.png 'api.png')
 
